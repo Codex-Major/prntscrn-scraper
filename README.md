@@ -6,11 +6,14 @@ can automatically extract the text from the image files using pytesseract.
 ## Requirements
 ```bash
 # Install tesseract
-sudo apt-get update
-sudo apt-get install tesseract-ocr
-sudo apt-get install libtesseract-dev
+sudo apt-get update;
+sudo apt-get install tesseract-ocr libtesseract-dev;
+
+# Git this script
+git clone https://github.com/ThePotato456/prntscrn-scraper;
 
 # Install python3 OpenCV and other requirements
+cd prntscrn-scraper;
 pip3 install -r requirements.txt
 ```
 
