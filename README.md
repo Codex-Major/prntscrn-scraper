@@ -10,7 +10,7 @@ Install tesseract:
 
 Git this script:
 
-`git clone https://github.com/ThePotato456/prntscrn-scraper`
+`git clone https://github.com/Codex-Major/prntscrn-scraper`
 
 Install python3 OpenCV and other requirements
 
