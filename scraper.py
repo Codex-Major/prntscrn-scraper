@@ -16,7 +16,6 @@ def generate_link():
     result_str = (''.join((random.choice(source) for i in range(6)))).lower()
     return (result_str)
 
-
 if __name__ == "__main__":
     try:
         if not os.path.exists('images'):
@@ -28,6 +27,7 @@ if __name__ == "__main__":
             file_count = 0
 
         try_count = 0
+        
         while True:
             try_count = try_count + 1
             url = "https://prnt.sc/" + generate_link()
@@ -51,8 +51,8 @@ if __name__ == "__main__":
                     with open(file_name, "wb") as image_file:
                         shutil.copyfileobj(BytesIO(dl.content), image_file)
             sys.stdout.flush()
-
             time.sleep(0.3)
+            
     except KeyboardInterrupt:
         print('\n[-] Exiting scraper.py, goodbye!')
         exit(0)
