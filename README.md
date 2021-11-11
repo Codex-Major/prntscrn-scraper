@@ -6,7 +6,7 @@ can automatically extract the text from the image files using pytesseract.
 ## Requirements
 Install tesseract:
 
-`sudo apt get update; sudo apt-get install tesseract-ocr libtesseract-dev`
+`sudo apt-get update; sudo apt-get install tesseract-ocr libtesseract-dev`
 
 Git this script:
 
