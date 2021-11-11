@@ -20,14 +20,11 @@ if __name__ == "__main__":
     try:
         if not os.path.exists('images'):
             os.mkdir('images/')
-
         if len(os.listdir('images/')):
             file_count = (len(os.listdir('images/')))
         else:
             file_count = 0
-
         try_count = 0
-        
         while True:
             try_count = try_count + 1
             url = "https://prnt.sc/" + generate_link()
@@ -38,7 +35,6 @@ if __name__ == "__main__":
             html_encoding = EncodingDetector.find_declared_encoding(response.content, is_html=True)
             encoding = html_encoding or http_encoding
             soup = BeautifulSoup(response.content, parser, from_encoding=encoding)
-            
             time.sleep(0.01)
             for image in soup.find_all('img', src=True):
                 if 'https://image.prntscr.com/image/' in image['src']:
@@ -52,7 +48,6 @@ if __name__ == "__main__":
                         shutil.copyfileobj(BytesIO(dl.content), image_file)
             sys.stdout.flush()
             time.sleep(0.3)
-            
     except KeyboardInterrupt:
         print('\n[-] Exiting scraper.py, goodbye!')
         exit(0)
