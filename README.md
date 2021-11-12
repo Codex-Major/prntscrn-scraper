@@ -25,7 +25,7 @@ This is just a simple scraper to generate random, 6 character, links for https:/
 
 
 ## find_text.py
-This script uses pytesseract to find text in images and output it into a txt file in ./image_text/ <br />
+This script uses pytesseract to find text in images and output it into a txt file in ./image_text/<br />
 
 `python3 find_text.py`
 
@@ -37,5 +37,5 @@ This script searches each file found by find_text.py for a given 'string', if it
 `python3 search_text.py -s string`
 
 
-![Screenshot_6](https://user-images.githubusercontent.com/39181001/141450540-0e859b50-e0ae-473f-b9e0-59714e85cf53.png)
+![searchtext_image](https://user-images.githubusercontent.com/39181001/141450540-0e859b50-e0ae-473f-b9e0-59714e85cf53.png)
 
