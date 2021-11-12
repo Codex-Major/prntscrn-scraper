@@ -1,6 +1,6 @@
 # prntscrn-scraper
 Due to the fact that prnt.sc openly hosts all of the uploaded photos publicly, we can generate a random string of chars and create a link. If
-the link is a valid one, the scraper will automatically scan the webpage for the image and download it. Using `python3 find-text.py`, we
+the link is a valid one, the scraper will automatically scan the webpage for the image and download it. Using `python3 find_text.py`, we
 can automatically extract the text from the image files using pytesseract.
 
 ## Requirements
