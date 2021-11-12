@@ -18,6 +18,7 @@ Usage:
 Arguments:
     -h          Shows this message.
     -s  <str>   String to search for.
+    
 """
 
 def chktxt(filepath,tries,filecount,srcword):
