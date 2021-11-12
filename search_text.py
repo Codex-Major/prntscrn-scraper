@@ -33,14 +33,12 @@ def chktxt(filepath,tries,filecount,srcword):
     infile=open(filepath,'r')
     intxt=infile.read()
     words=intxt.split(" ")
-    w=0
     for word in words:
-        w+=1
         word.replace(" ","")
         word.replace("\n","")
         if srcword in word:
             word=word.lower()
-            sys.stdout.write("[+] Found a match on try {}! Singled the file out in ./searches/{}/.\n".format(tries,srcword))
+            sys.stdout.write("[+] Found a match on try {}! Singled the file out in ./searches/{}/{}\n".format(tries,srcword,filepath[11:]))
             open(os.path.join('searches/{}'.format(srcword), '{}'.format(filepath[11:])), 'wb').write(bytes(intxt, 'UTF-8'))
             break
     sys.stdout.write("[*] Matches were stored in ./searches/{}\n".format(srcword))
