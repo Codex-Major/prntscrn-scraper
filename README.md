@@ -36,5 +36,6 @@ This script searches each file found by find_text.py for a given 'string', if it
 
 `python3 search_text.py -s string`
 
-![searchtext_image](https://user-images.githubusercontent.com/39181001/141443902-cdcd35df-e6c2-4417-a3ed-10caaae4acc9.png)
+
+![Screenshot_6](https://user-images.githubusercontent.com/39181001/141450540-0e859b50-e0ae-473f-b9e0-59714e85cf53.png)
 
