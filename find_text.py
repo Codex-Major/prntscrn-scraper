@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import cv2
 import os
-import time
+#import time
 import pytesseract
 
 def get_text_from_image(img_path, try_count, image_count):
@@ -27,7 +27,7 @@ if __name__ == "__main__":
             try:
                 try_count = try_count + 1
                 get_text_from_image(os.path.join('images/', image), try_count, image_count)
-                time.sleep(2)
+                #time.sleep(2)
             except Exception as e:
                 print('[*] No text found...\n'.format(try_count, image_count))
                 non_images.append(image)
