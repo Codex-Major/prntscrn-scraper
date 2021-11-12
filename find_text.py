@@ -33,5 +33,5 @@ if __name__ == "__main__":
                 non_images.append(image)
         print('[+] Done!\n')
     except KeyboardInterrupt:
-        print('\n[-] Exiting find-text.py, goodbye!')
+        print('\n[-] Exiting find_text.py, goodbye!')
         exit(0)
