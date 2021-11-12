@@ -39,9 +39,11 @@ def chktxt(filepath,tries,filecount,srcword):
         word.replace(" ","")
         word.replace("\n","")
         if srcword in word:
-            sys.stdout.write("[+] Found a match! Singled the file out.\n\n")
+            word=word.lower()
+            sys.stdout.write("[+] Found a match on try {}! Singled the file out in ./searches/{}/.\n".format(tries,srcword))
             open(os.path.join('searches/{}'.format(srcword), '{}'.format(filepath[11:])), 'wb').write(bytes(intxt, 'UTF-8'))
             break
+    sys.stdout.write("[*] Matches were stored in ./searches/{}\n".format(srcword))
 
 tries=0
 if __name__ == "__main__":
@@ -54,13 +56,13 @@ if __name__ == "__main__":
             if "-s" in cmdargs[0:]:
                 swidx=cmdargs.index("-s")
                 srcword=cmdargs[swidx+1]
+                srcword=srcword.lower()
             else:
                 sys.stdout.write(helptext)
                 sys.stdout.write("[!] Improper usage!\n")
                 exit(0)
         else:
             srcword=input("[->] Search for what string? -> ")
-
         filecount=len(os.listdir('image_text'))
         emptyfs=[]
         sys.stdout.write("[+] Checking all files within ./image_text for '{}'.\n".format(srcword))
@@ -68,10 +70,8 @@ if __name__ == "__main__":
             try:
                 tries+=1
                 chktxt(os.path.join('image_text/', f), tries, filecount, srcword)
-
             except Exception as e:
                 print(e)
-
     except FileNotFoundError:
         sys.stderr.write("[-] The ./image_text directory is empty or does not exist... create/populate it using find_text.py ...\n")
         exit(0)
